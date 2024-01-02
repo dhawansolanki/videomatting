@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Load the model (this can be done once when the server starts)
-model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3").cuda()
+model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3").cpu()
 convert_video = torch.hub.load("PeterL1n/RobustVideoMatting", "converter")
 
 # Helper function to download video from URL
@@ -20,7 +20,7 @@ def download_video(video_url, file_path):
         raise Exception(f"Error downloading video: status code {response.status_code}")
 
 # Define the API endpoint
-@app.route('/process_video', methods=['POST'])
+@app.route('/videomatting', methods=['POST'])
 def process_video():
     video_url = request.json.get('video_url')
     if not video_url:

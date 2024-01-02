@@ -1,5 +1,5 @@
 # Use an official PyTorch image with CUDA support as a parent image
-FROM pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
+FROM python:3.10-bullseye
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
