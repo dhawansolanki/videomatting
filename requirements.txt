@@ -27,7 +27,7 @@ PIMS==0.6.1
 requests==2.31.0
 slicerator==1.1.0
 sympy==1.12
-torch==2.1.2
+torch==2.0.1
 torchvision==0.16.2
 tqdm==4.66.1
 triton==2.1.0
