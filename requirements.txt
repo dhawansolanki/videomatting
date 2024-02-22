@@ -32,3 +32,5 @@ torchvision
 tqdm==4.66.1
 urllib3==2.1.0
 flask
+boto3
+python-dotenv
